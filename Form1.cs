@@ -10,20 +10,30 @@ namespace SimpleCalculator
             btnEqual.Click += btnEqual_Click;
         }
 
+        bool isNewNumber = false;
         private void button_Click(object sender, EventArgs e)
         {
             // 버튼 누르면 txtInputWindow에 버튼의 텍스트 추가
             Button btn = sender as Button;
-            txtInputWindow.Text += btn.Text;
 
-            if (char.IsDigit(btn.Text[0]))
+            txtInputWindow.Text += btn.Text; // 버튼의 텍스트를 입력창에 추가
+
+            if (char.IsDigit(btn.Text[0])) 
             {
-                txtOutputWindow.Text = txtOutputWindow.Text + btn.Text;
+                if (isNewNumber)
+                {
+                    txtOutputWindow.Text = btn.Text; // 이전 숫자 버리고 새로 시작
+                    isNewNumber = false;
+                }
+                else
+                {
+                    txtOutputWindow.Text += btn.Text; // 숫자 계속 이어서 표시
+                }
             }
             else
             {
-                // 연산자 누르면 숫자 초기화
-                txtOutputWindow.Clear();
+                // 연산자 누르면 다음 숫자에서 초기화하도록 표시만
+                isNewNumber = true;
             }
         }
         private void btnEqual_Click(object sender, EventArgs e)
