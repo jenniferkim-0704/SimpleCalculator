@@ -15,6 +15,7 @@ namespace SimpleCalculator
             // 버튼 누르면 txtInputWindow에 버튼의 텍스트 추가
             Button btn = sender as Button;
             txtInputWindow.Text += btn.Text;
+            txtOutputWindow.Text = btn.Text;  // 출력창에도 같이 표시
         }
         private void btnEqual_Click(object sender, EventArgs e)
         {
@@ -40,6 +41,12 @@ namespace SimpleCalculator
                 txtInputWindow.Text = "오류";
                 txtOutputWindow.Text = "";
             }
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            txtInputWindow.Clear();   // 입력창 초기화
+            txtOutputWindow.Clear();  // 출력창 초기화
         }
     }
 }

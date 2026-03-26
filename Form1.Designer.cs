@@ -98,6 +98,7 @@
             btnC.TabIndex = 4;
             btnC.Text = "C";
             btnC.UseVisualStyleBackColor = true;
+            btnC.Click += btnC_Click;
             // 
             // btnDel
             // 
