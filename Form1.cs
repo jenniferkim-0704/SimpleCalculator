@@ -1,3 +1,5 @@
+using System.Linq.Expressions;
+
 namespace SimpleCalculator
 {
     public partial class Form1 : Form
@@ -18,14 +20,19 @@ namespace SimpleCalculator
         {
             try
             {
-                string expression = txtInputWindow.Text;
+                string displayExpression = txtInputWindow.Text; // 화면에 보이는 식
+                string expression = displayExpression;          // 계산에 사용할 식
+
+                // 계산용만 변환
+                expression = expression.Replace("x", "*");
+                expression = expression.Replace("÷", "/");
 
                 var result = new System.Data.DataTable().Compute(expression, null);
 
-                // Input에는 전체 식 표시
-                txtInputWindow.Text = expression + "=" + result.ToString();
+                // 원래식과 결과를 함께 출력
+                txtInputWindow.Text = displayExpression + "=" + result.ToString();
 
-                // output에는 결과값 표시
+                // 결과만 출력
                 txtOutputWindow.Text = result.ToString();
             }
             catch
