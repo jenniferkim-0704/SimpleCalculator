@@ -18,7 +18,7 @@ namespace SimpleCalculator
 
             txtInputWindow.Text += btn.Text; // 버튼의 텍스트를 입력창에 추가
 
-            if (char.IsDigit(btn.Text[0])) 
+            if (char.IsDigit(btn.Text[0]))
             {
                 if (isNewNumber)
                 {
@@ -94,8 +94,8 @@ namespace SimpleCalculator
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(txtInputWindow.Text))
-    {
+            if (!string.IsNullOrEmpty(txtInputWindow.Text))
+            {
                 txtInputWindow.Text = txtInputWindow.Text.Substring(0, txtInputWindow.Text.Length - 1);
             }
 
