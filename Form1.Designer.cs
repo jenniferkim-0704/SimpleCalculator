@@ -38,7 +38,7 @@
             btnSeven = new Button();
             btnFour = new Button();
             btnOne = new Button();
-            btnOpen = new Button();
+            btnPlMa = new Button();
             btnEight = new Button();
             btnFive = new Button();
             btnTwo = new Button();
@@ -46,7 +46,7 @@
             btnNine = new Button();
             btnSix = new Button();
             btnThree = new Button();
-            btnClose = new Button();
+            btnDot = new Button();
             btnMultiplication = new Button();
             btnMinus = new Button();
             btnPlus = new Button();
@@ -161,17 +161,17 @@
             btnOne.UseVisualStyleBackColor = true;
             btnOne.Click += button_Click;
             // 
-            // btnOpen
+            // btnPlMa
             // 
-            btnOpen.Font = new Font("맑은 고딕", 15F);
-            btnOpen.ForeColor = Color.MediumBlue;
-            btnOpen.Location = new Point(12, 387);
-            btnOpen.Name = "btnOpen";
-            btnOpen.Size = new Size(93, 42);
-            btnOpen.TabIndex = 10;
-            btnOpen.Text = "(";
-            btnOpen.UseVisualStyleBackColor = true;
-            btnOpen.Click += button_Click;
+            btnPlMa.Font = new Font("맑은 고딕", 15F);
+            btnPlMa.ForeColor = Color.MediumBlue;
+            btnPlMa.Location = new Point(12, 387);
+            btnPlMa.Name = "btnPlMa";
+            btnPlMa.Size = new Size(93, 42);
+            btnPlMa.TabIndex = 10;
+            btnPlMa.Text = "+/-";
+            btnPlMa.UseVisualStyleBackColor = true;
+            btnPlMa.Click += button_Click;
             // 
             // btnEight
             // 
@@ -250,17 +250,17 @@
             btnThree.UseVisualStyleBackColor = true;
             btnThree.Click += button_Click;
             // 
-            // btnClose
+            // btnDot
             // 
-            btnClose.Font = new Font("맑은 고딕", 15F);
-            btnClose.ForeColor = Color.MediumBlue;
-            btnClose.Location = new Point(261, 387);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(93, 42);
-            btnClose.TabIndex = 18;
-            btnClose.Text = ")";
-            btnClose.UseVisualStyleBackColor = true;
-            btnClose.Click += button_Click;
+            btnDot.Font = new Font("맑은 고딕", 15F);
+            btnDot.ForeColor = Color.MediumBlue;
+            btnDot.Location = new Point(261, 387);
+            btnDot.Name = "btnDot";
+            btnDot.Size = new Size(93, 42);
+            btnDot.TabIndex = 18;
+            btnDot.Text = ".";
+            btnDot.UseVisualStyleBackColor = true;
+            btnDot.Click += button_Click;
             // 
             // btnMultiplication
             // 
@@ -319,7 +319,7 @@
             Controls.Add(btnPlus);
             Controls.Add(btnMinus);
             Controls.Add(btnMultiplication);
-            Controls.Add(btnClose);
+            Controls.Add(btnDot);
             Controls.Add(btnThree);
             Controls.Add(btnSix);
             Controls.Add(btnNine);
@@ -327,7 +327,7 @@
             Controls.Add(btnTwo);
             Controls.Add(btnFive);
             Controls.Add(btnEight);
-            Controls.Add(btnOpen);
+            Controls.Add(btnPlMa);
             Controls.Add(btnOne);
             Controls.Add(btnFour);
             Controls.Add(btnSeven);
@@ -356,7 +356,7 @@
         private Button btnSeven;
         private Button btnFour;
         private Button btnOne;
-        private Button btnOpen;
+        private Button btnPlMa;
         private Button btnEight;
         private Button btnFive;
         private Button btnTwo;
@@ -364,7 +364,7 @@
         private Button btnNine;
         private Button btnSix;
         private Button btnThree;
-        private Button btnClose;
+        private Button btnDot;
         private Button btnMultiplication;
         private Button btnMinus;
         private Button btnPlus;
